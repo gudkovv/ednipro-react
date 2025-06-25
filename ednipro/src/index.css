@@ -77,14 +77,38 @@ select {
   }
 }
 
+
+
+
+body {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 .mainContainer {
-  max-width: 1200px;
+  width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+@media (max-width: 1280px) {
+  .mainContainer {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
+
+
+/* header ********************/
+
+
 .header {
-  background-color: rgb(59, 59, 255);
+  background-color: rgb(37, 37, 141);
   height: 60px;
   color: white;
   font-size: 20px;
@@ -92,3 +116,79 @@ select {
   display: flex;
   align-items: center;
 }
+
+.logo{
+  padding: 0;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  max-width: auto;
+}
+
+.header ul{
+  display: flex;
+  color: white;
+  text-decoration: none;
+  margin: 0;
+}
+
+.header ul ol{
+  padding: 0 0 0 30px;
+}
+
+.header ul ol a{
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* foreword ********************/
+
+.foreword {
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url('../src/img/header-img.jpg');
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.forewordContent{
+  margin: 0 auto;
+  padding: 140px 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.forewordContent h1{
+  margin: 20px 0;
+  font-weight: 900;
+  font-size: 70px;
+}
+
+.forewordContent p{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* museum box ********************/
+
+.museumBox {
+  color: black;
+  height: 200px;
+  background-color: rgb(157, 135, 255);
+  display: flex;
+  align-items: center;
+}
+
