@@ -1,6 +1,6 @@
 import museums from '../data/museums.json';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -13,7 +13,7 @@ function MuseumBox() {
                     <div className="museumBoxContent" key={museum.id}>
                         <div className="museumBoxGallery">
                             <Swiper
-                                modules={[Navigation, Pagination, Scrollbar]}
+                                modules={[Navigation, Pagination, Scrollbar, A11y]}
                                 navigation
                                 pagination={{ clickable: true }}
                                 spaceBetween={50}
@@ -42,7 +42,6 @@ function MuseumBox() {
                     </div>
                 ))}
             </div>
-
         </div>
     )
 }
