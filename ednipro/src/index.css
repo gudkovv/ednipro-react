@@ -55,7 +55,7 @@ img {
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -117,7 +117,7 @@ body {
   align-items: center;
 }
 
-.logo{
+.logo {
   padding: 0;
 }
 
@@ -127,24 +127,24 @@ body {
   width: 100%;
 }
 
-.menu{
+.menu {
   display: flex;
   justify-content: space-between;
   max-width: auto;
 }
 
-.header ul{
+.header ul {
   display: flex;
   color: white;
   text-decoration: none;
   margin: 0;
 }
 
-.header ul ol{
+.header ul ol {
   padding: 0 0 0 30px;
 }
 
-.header ul ol a{
+.header ul ol a {
   color: white;
   text-decoration: none;
   margin: 0;
@@ -163,7 +163,7 @@ body {
   background-size: cover;
 }
 
-.forewordContent{
+.forewordContent {
   margin: 0 auto;
   padding: 140px 0;
   color: white;
@@ -171,15 +171,15 @@ body {
   flex-direction: column;
 }
 
-.forewordContent h1{
+.forewordContent h1 {
   margin: 20px 0;
   font-weight: 900;
   font-size: 70px;
 }
 
-.forewordContent p{
-    font-weight: 600;
-    font-size: 20px;
+.forewordContent p {
+  font-weight: 600;
+  font-size: 20px;
 }
 
 /* museum box ********************/
@@ -191,40 +191,43 @@ body {
   padding: 30px 0;
 }
 
-.musemBoxContent {
+.museumBoxContent {
   display: flex;
-  align-items: stretch; /* растягивает .museumBoxText и .museumBoxGallery на всю высоту */
+  align-items: stretch; /* растягивает детей на всю высоту */
+  justify-content: center;
   margin-bottom: 30px;
   background: white;
   border-radius: 10px;
   padding: 30px 15px;
-  justify-content: center;
   min-height: 320px;
+}
 
+.museumBoxGallery {
+  display: flex;
+  align-items: center;    /* центрирует по вертикали */
+  justify-content: center;
+  height: 100%;           /* растягивает галерею */
 }
 
 .museumBox img {
-  width: 100%;
-  max-width: 400px;
-  height: 100%;
   object-fit: cover;
-  margin-right: 20px;
+  max-height: 400px;
 }
 
-.museumBoxText{
+.museumBoxText {
   max-width: 700px;
-  flex: 1 1 0;         /* растягивается по высоте */
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   margin-left: 30px;
 }
 
-.museumBoxText h2{
+.museumBoxText h2 {
   font-weight: 900;
   font-size: 30px;
 }
 
-.museumBoxText p{
+.museumBoxText p {
   font-weight: 500;
   font-size: 20px;
 }
@@ -234,7 +237,7 @@ body {
   width: 100%;
   padding: 8px 0;
   margin-top: 20px;
-  border: 3px solid   #006eec;
+  border: 3px solid #006eec;
   border-radius: 4px;
   background: #2e90ff;
   color: white;
@@ -245,10 +248,17 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 
-.museumBoxButton:hover{
+.museumBoxButton:hover {
   background: #035fc9;
   transition: background-color 0.2s ease-in-out;
 }
 
+.museumBox img {
+  max-height: 400px;
+  margin-bottom: 30px;
+}
 
+.swiper {
+  max-width: 500px;
+}
 
