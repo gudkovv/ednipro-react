@@ -104,12 +104,12 @@ body {
 }
 
 
-/* header ********************/
+/* navabar ********************/
 
 
-.header {
-  background-color: rgb(37, 37, 141);
-  height: 60px;
+.navbar {
+  background: linear-gradient(90deg, #98c8ff 50%, #253b8d 100%);
+  height: 70px;
   color: white;
   font-size: 20px;
   font-weight: bolder;
@@ -121,7 +121,7 @@ body {
   padding: 0;
 }
 
-.headerMenu {
+.navbarElements {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -133,37 +133,39 @@ body {
   max-width: auto;
 }
 
-.header ul {
+.navbar ul {
   display: flex;
   color: white;
   text-decoration: none;
   margin: 0;
 }
 
-.header ul ol {
+.navbar ul ol {
   padding: 0 0 0 30px;
 }
 
-.header ul ol a {
+.navbar ul ol a {
   color: white;
   text-decoration: none;
   margin: 0;
   padding: 0;
 }
 
-/* foreword ********************/
+/* header ********************/
 
-.foreword {
+.header {
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url('../public/img/header-img.jpg');
-  background-position: center 10%;
+    url('../public/img/museum-1-2.jfif');
+  background-position: center 40%;
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
-.forewordContent {
+.headerContent {
   margin: 0 auto;
   padding: 140px 0;
   color: white;
@@ -171,42 +173,55 @@ body {
   flex-direction: column;
 }
 
-.forewordContent h1 {
+.headerContent h1 {
   margin: 20px 0;
   font-weight: 900;
   font-size: 70px;
 }
 
-.forewordContent p {
+.headerContent p {
   font-weight: 600;
   font-size: 20px;
+}
+
+.popularMuseums {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  height: 100px;
+  font-weight: 800;
+  font-size: 35px;
+  color: black;
 }
 
 /* museum box ********************/
 
 .museumBox {
   color: black;
-  background-color: rgb(160, 175, 255);
-  border: 3px solid black;
+  background-color: #b2d6ff;
   padding: 30px 0;
+  border-radius: 20px;
 }
 
 .museumBoxContent {
   display: flex;
-  align-items: stretch; /* растягивает детей на всю высоту */
+  align-items: stretch; 
   justify-content: center;
   margin-bottom: 30px;
   background: white;
   border-radius: 10px;
   padding: 30px 15px;
   min-height: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .museumBoxGallery {
   display: flex;
-  align-items: center;    /* центрирует по вертикали */
+  align-items: center;    
   justify-content: center;
-  height: 100%;           /* растягивает галерею */
+  height: 100%;          
 }
 
 .museumBox img {
@@ -261,10 +276,31 @@ body {
   max-width: 500px;
 }
 
+.swiper-button-next{
+  background: url('../public/svg/arrow-right.svg') no-repeat center;
+}
+
+
+.swiper-button-prev{
+  background: url('../public/svg/arrow-left.svg') no-repeat center;
+  
+}
+
 .swiper-button-next,
-.swiper-button-prev {
-  color: #333; 
-  opacity: 1;
-  z-index: 10;
+.swiper-button-prev{
+  background-color: rgba(255, 255, 255, 0.418);
+  border-radius: 7px;
+  background-size: 40px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.swiper, .swiper * {
+  user-select: none;
 }
 

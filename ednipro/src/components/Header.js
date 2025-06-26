@@ -1,22 +1,21 @@
 function Header() {
     return (
-        <div className="header">
-            <div className="mainContainer">
-                <div className="headerContent">
-                    <div className="headerMenu">
-                        <div className="logo">
-                            <p>Logo</p>
-                        </div>
-                        <div className="menu">
-                            <ul>
-                                <ol><a href="#home">Музеї</a></ol>
-                                <ol><a href="#about">Контакти</a></ol>
-                            </ul>
-                        </div>
+        <>
+            <div className="header">
+                <div className="mainContainer">
+                    <div className="headerContent">
+                        <h1>Поринь у історію Дніпра</h1>
+                        <p>Дніпро — місто з багатою історією та культурною спадщиною. Тут розташовані численні музеї,
+                            які зберігають пам'ять про минуле та представляють різноманітні аспекти життя міста.</p>
+                        <p>Наша задача - допомогти вам знайти цікаві музеї Дніпра,
+                            дізнатися про їхні експозиції та події, а також спланувати свій візит.</p>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="popularMuseums">
+                <h2>Популярні музеї:</h2>
+            </div>
+        </>
     )
 }
 

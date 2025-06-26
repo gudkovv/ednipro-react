@@ -1,14 +1,14 @@
 import './App.css';
-import Header from './components/Header'; 
-import Foreword from './components/Foreword';
+import Navbar from './components/Navbar'; 
+import Header from './components/Header';
 import MuseumBox from './components/MuseumBox'; 
 
 
 function App() {
   return (
     <>
+      <Navbar />
       <Header />
-      <Foreword />
       <MuseumBox />
     </>
   );
