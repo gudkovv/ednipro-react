@@ -13,7 +13,7 @@ function Header() {
                 </div>
             </div>
             <div className="popularMuseums">
-                <h2>Популярні музеї:</h2>
+                <h2 id="museums">Популярні музеї:</h2>
             </div>
         </>
     )

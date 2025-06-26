@@ -1,23 +1,42 @@
-function Navbar() {
+function Navbar({ variant }) {
     return (
-        <div className="navbar">
+        <div id="home" className={`navbar${variant === "footer" ? " footer" : ""}`}>
             <div className="mainContainer">
                 <div className="navbarContent">
                     <div className="navbarElements">
                         <div className="logo">
-                            <p>Logo</p>
+                            <a href="#home"><img src="/img/logo.png" alt="logo"></img></a>
                         </div>
-                        <div className="menu">
-                            <ul>
-                                <ol><a href="#home">Музеї</a></ol>
-                                <ol><a href="#about">Контакти</a></ol>
-                            </ul>
-                        </div>
+                        {variant === "footer" ? (
+                            // Контент футера
+                            <div className="footerContent">
+                                <p>© 2025 Музеї Дніпра</p>
+                            </div>
+                        ) : (
+                            // Контент обычного навбара
+                            <div className="menu">
+                                <ul>
+                                    <ol><a href="#museums">Музеї</a></ol>
+                                    <ol><a href="#contacts">Контакти</a></ol>
+                                </ul>
+                                <div className="socials">
+                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                        <img src="/svg/facebook.svg" alt="Facebook" />
+                                    </a>
+                                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                        <img src="/svg/instagram.svg" alt="Instagram" />
+                                    </a>
+                                    <a href="https://web.telegram.org/" target="_blank" rel="noopener noreferrer">
+                                        <img src="/svg/telegram.svg" alt="Telegram" />
+                                    </a>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Navbar;
