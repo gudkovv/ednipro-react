@@ -1,6 +1,7 @@
 {
   "name": "ednipro",
   "version": "0.1.0",
+  "homepage": "https://gudkovvv.github.io/react-ednipro",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
